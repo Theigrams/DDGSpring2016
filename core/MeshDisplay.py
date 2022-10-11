@@ -899,7 +899,7 @@ class MeshDisplay(object):
         # TODO this is exactly what geometry shaders are meant for
 
         # Allocate new arrays
-        nLines = linePos.shape[0]/2
+        nLines = linePos.shape[0]//2
         stripPos = np.zeros((nLines*6,3), dtype=np.float32)
         stripNorm = np.zeros((nLines*6,3), dtype=np.float32)
         stripColor = np.zeros((nLines*6,3), dtype=np.float32)
@@ -1248,7 +1248,7 @@ class MeshDisplay(object):
 
         # Compute the median edge length
         lengths = sorted([norm(e.anyHalfEdge.vector) for e in self.mesh.edges])
-        self.medianEdgeLength = lengths[(len(lengths)*9)/10] #TODO not actually median...
+        self.medianEdgeLength = lengths[int((len(lengths)*9)/10)] #TODO not actually median...
 
 
     def redraw(self):

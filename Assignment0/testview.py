@@ -4,10 +4,13 @@
 import sys, os
 
 ## Imports from this project
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'core')) # hack to allow local imports without creaing a module or modifying the path variable
-from InputOutput import *
-from MeshDisplay import MeshDisplay
-from HalfEdgeMesh import *
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'core'))
+# hack to allow local imports without creaing a module or modifying the path variable
+sys.path.append('..')
+
+from core.InputOutput import *
+from core.MeshDisplay import MeshDisplay
+from core.HalfEdgeMesh import *
 
 
 def main():
@@ -30,4 +33,5 @@ def main():
     meshDisplay.startMainLoop()
 
 
-if __name__ == "__main__": main()
+if __name__ == "__main__":
+    main()

@@ -55,3 +55,11 @@ docs/_build/
 
 # PyBuilder
 target/
+.idea/.gitignore
+.gitignore
+.idea/DDGSpring2016.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/inspectionProfiles/Project_Default.xml

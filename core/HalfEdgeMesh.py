@@ -162,7 +162,7 @@ class HalfEdgeMesh(object):
 
         # Iterate through the edges to fill out the twin reference for each halfedge
         # This is where we use edgeHalfEdgeDict.
-        for (edgeKey, halfEdgeList) in edgeHalfEdgeDict.iteritems():
+        for (edgeKey, halfEdgeList) in edgeHalfEdgeDict.items():
 
             # Assuming the mesh is well-formed, this must be a list with two elements
             if(len(halfEdgeList) == 2):
